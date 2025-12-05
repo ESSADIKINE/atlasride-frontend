@@ -276,13 +276,11 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-1 overflow-hidden">
-                        <CarList
-                            cars={nearbyCars}
-                            selectedCarId={selectedCarId || undefined}
-                            onSelect={handleCarSelect}
-                        />
-                    </div>
+                    <CarList
+                        cars={nearbyCars}
+                        selectedCarId={selectedCarId || undefined}
+                        onSelect={handleCarSelect}
+                    />
                 </aside>
 
                 {/* Map Area */}
