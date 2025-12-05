@@ -347,7 +347,7 @@ export default function MapView({
     }, [routeCoordinates, userLocation]);
 
     return (
-        <div className="relative w-full h-full" style={{ minHeight: '400px' }}>
+        <div className="relative w-full h-[90vh]" style={{ minHeight: '400px' }}>
             <div
                 ref={mapContainer}
                 className="map-container w-full h-full absolute inset-0"
