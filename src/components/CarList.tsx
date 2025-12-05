@@ -19,7 +19,7 @@ export default function CarList({ cars, selectedCarId, onSelect }: CarListProps)
     }
 
     return (
-        <div className="space-y-3 p-4 overflow-y-auto h-full custom-scrollbar">
+        <div className="space-y-3 p-4 overflow-y-auto h-[74%] custom-scrollbar">
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
                 <Car className="w-6 h-6 text-primary" />
                 Available Cars ({cars.length})
