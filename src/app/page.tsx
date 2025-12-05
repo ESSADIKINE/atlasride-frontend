@@ -324,27 +324,27 @@ export default function Home() {
                             {error}
                         </div>
                     )}
-
-                    {/* Floating Chat Button */}
-                    <button
-                        onClick={() => setIsChatOpen(!isChatOpen)}
-                        className="absolute bottom-6 right-6 z-40 w-14 h-14 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg border-2 border-primary-foreground/20 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
-                    >
-                        <MessageSquare className="w-6 h-6" />
-                    </button>
-
-                    {/* Floating Chat Panel */}
-                    {isChatOpen && (
-                        <div className="absolute bottom-24 right-6 z-40 w-96 h-[500px] bg-background rounded-lg shadow-2xl border border-border overflow-hidden animate-in slide-in-from-bottom-4 fade-in">
-                            <ChatPanel
-                                userLat={userLocation?.lat || null}
-                                userLng={userLocation?.lng || null}
-                                onCarsUpdate={handleChatCarsUpdate}
-                            />
-                        </div>
-                    )}
                 </main>
             </div>
+
+            {/* Floating Chat Button - Fixed to Page */}
+            <button
+                onClick={() => setIsChatOpen(!isChatOpen)}
+                className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg border-2 border-primary-foreground/20 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
+            >
+                <MessageSquare className="w-6 h-6" />
+            </button>
+
+            {/* Floating Chat Panel - Fixed to Page */}
+            {isChatOpen && (
+                <div className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-background rounded-lg shadow-2xl border border-border overflow-hidden animate-in slide-in-from-bottom-4 fade-in">
+                    <ChatPanel
+                        userLat={userLocation?.lat || null}
+                        userLng={userLocation?.lng || null}
+                        onCarsUpdate={handleChatCarsUpdate}
+                    />
+                </div>
+            )}
         </div>
     );
 }
