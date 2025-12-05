@@ -254,7 +254,7 @@ export default function Home() {
             </header>
 
             {/* Main Content */}
-            <div className="flex-1 flex">
+            <div className="flex-1 flex relative">
                 {/* Sidebar - Car List */}
                 <aside className="w-96 glass border-r border-border flex flex-col z-10 shadow-xl transition-all duration-300 ease-in-out absolute md:relative h-full -translate-x-full md:translate-x-0">
                     <div className="p-4 border-b border-border">
